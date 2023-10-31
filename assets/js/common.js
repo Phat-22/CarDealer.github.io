@@ -18,7 +18,7 @@ function brandProducts() {
             const liBrand = document.createElement('li');
             ulBrand[i].appendChild(liBrand);
             liBrand.innerHTML = `
-                <a href="./products.html?brand=${brandArr[j]}">${brandArr[j]}</a>
+                <a href="./products?brand=${brandArr[j]}">${brandArr[j]}</a>
             `
         }
     }
@@ -37,7 +37,7 @@ function categoryProducts() {
             const li = document.createElement('li');
             ulCategory[i].appendChild(li);
             li.innerHTML = `
-                <a href="./products.html?category=${categoryArr[j]}">${categoryArr[j]}</a>
+                <a href="./products?category=${categoryArr[j]}">${categoryArr[j]}</a>
             `
         }
     }
