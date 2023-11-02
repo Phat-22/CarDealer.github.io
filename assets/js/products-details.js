@@ -40,7 +40,7 @@ function detailsProducts() {
                                 </select>
                             </p>
                             <div class="quantity__addtocart">
-                                <input type="number" min="1" max="10" placeholder="Quantity" />
+                                <input class="quantity" type="number" min="1" max="10" placeholder="Quantity" />
                                 <button id="cart" class="border__button radius">Add to cart</button>
                             </div>
                             <p><strong>Category: </strong> ${target.category}</p>
@@ -72,9 +72,8 @@ function detailsProducts() {
                 `;
         const inputEl = detailsEl.querySelector('.quantity');
         let quantityInput;
-        inputEl.addEventListener('change', (e) => quantityInput = e.target.value);
+        inputEl.addEventListener('change', (event) => quantityInput = event.target.value);
         const buttonEl = detailsEl.querySelector('#cart');
-        console.log(buttonEl);
         buttonEl.addEventListener('click', () => {
             addToCart(target, quantityInput);
             cartNumber();
