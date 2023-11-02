@@ -36,7 +36,7 @@ function totalCart() {
         cartItem.forEach(item => {
         subTotal += item.price * item.quantity;
         tax += (item.price * 0.2) * item.quantity;
-        total = subTotal;
+        total = subTotal + tax;
         });    
         cartTotal.innerHTML = `
             <li>

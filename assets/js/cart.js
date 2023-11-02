@@ -11,10 +11,6 @@ export function cartNumber() {
     const numberCart = document.querySelector('#numbers');
     let cartNumber = 0;
     let cartItem = JSON.parse(localStorage.getItem('cart'));
-    // const numCart = cartItem.reduce((acc, item)  => {
-    //     return acc + item.quantity;
-    // }, 0);
-    // console.log(numCart);
     cartItem.forEach(item => {
         cartNumber += item.quantity;
     })
