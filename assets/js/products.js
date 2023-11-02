@@ -34,15 +34,15 @@ function items(itemData) {
         itemEl.classList.add("products--items");
         itemEl.innerHTML = `
             <div class="products--items__img">
-                <a href="./product-details?id=${itemData.id}"><img src="${itemData.image1}" alt="" /></a>
+                <a href="./product-details.html?id=${itemData.id}"><img src="${itemData.image1}" alt="" /></a>
                 <div class="overlay">
                     <div class="text">
-                        <a href="./product-details?id=${itemData.id}"><img src="${itemData.image2}" alt="" /></a>
+                        <a href="./product-details.html?id=${itemData.id}"><img src="${itemData.image2}" alt="" /></a>
                     </div>
                 </div>
             </div>
             <div class="products--items__main">
-                <a href="./product-details?id=${itemData.id}">${itemData.name}</a>
+                <a href="./product-details.html?id=${itemData.id}">${itemData.name}</a>
                 <p>$${itemData.price}</p>
                 <button class="border__button">Thêm vào giỏ hàng</button>
             </div>

@@ -11,10 +11,13 @@ export function cartNumber() {
     const numberCart = document.querySelector('#numbers');
     let cartNumber = 0;
     let cartItem = JSON.parse(localStorage.getItem('cart'));
+    // const numCart = cartItem.reduce((acc, item)  => {
+    //     return acc + item.quantity;
+    // }, 0);
+    // console.log(numCart);
     cartItem.forEach(item => {
         cartNumber += item.quantity;
-    });
-
+    })
     numberCart.setAttribute('data-after', cartNumber);
 }
 
@@ -26,14 +29,13 @@ export function addToCart(item, val) {
     }
     const target = cart.find(element => element.id === item.id); //-- true
     if (target) {
-        console.log(typeof target.quantity);
-        console.log(typeof val);
-        target.quantity = Number(target.quantity) + Number(val);
-    }
-    else {
+            console.log(typeof target.quantity);
+            console.log(typeof val);
+            target.quantity = Number(target.quantity) + Number(val);
+    } else {
         const cartItem = {
             ...item,
-            quantity: Number(val)
+            quantity: Number(val),
         }
         cart.push(cartItem);
     }
@@ -64,7 +66,7 @@ function showCart() {
             trEl.innerHTML = `
                     <td>${item.id}</td>
                     <td class="weight">${item.name}</td>
-                    <td><a href="./product-details?id=${item.id}"><img src="${item.image1}" alt="item" /></a></td>
+                    <td><a href="./product-details.html?id=${item.id}"><img src="${item.image1}" alt="item" /></a></td>
                     <td>$${item.price}</td>
                     <td>
                         <input type="number" id="quantityInput" min="1" max="10"  value="${item.quantity}"/> 

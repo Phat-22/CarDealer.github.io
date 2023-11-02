@@ -14,7 +14,7 @@ function showCartCheckout() {
         trEl.innerHTML = `
                 <td>${item.id}</td>
                 <td class="weight">${item.name}</td>
-                <td><a href="./product-details?id=${item.id}"><img src="${item.image1}" alt="item" /></a></td>
+                <td><a href="./product-details.html?id=${item.id}"><img src="${item.image1}" alt="item" /></a></td>
                 <td>$${item.price}</td>
                 <td>${item.quantity}</td>
                 <td>$${(item.price * item.quantity)}</td>
