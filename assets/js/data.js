@@ -66,7 +66,7 @@ const listItems = [
         category: 'Sedan',
         brand: 'LEXUS',
         image1: './assets/images/ES-250-trang.png',
-        image2: './assets/images/Es-250-den.jpg',
+        image2: './assets/images/ES-250-den.jpg',
         isNew: true,
         color: ['Trắng', 'Đen'],
         status:'..'
