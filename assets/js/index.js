@@ -29,7 +29,7 @@ function loadProducts() {
             `
             const buttonEl = itemEl.querySelector('button');
             buttonEl.addEventListener('click', () => {
-                addToCart(item);
+                addToCart(item, 1);
                 cartNumber();
             });
         }

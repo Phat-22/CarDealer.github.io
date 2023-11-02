@@ -19,19 +19,21 @@ export function cartNumber() {
 }
 
 //-- Add to cart
-export function addToCart(item) {
+export function addToCart(item, val) {
     let storage = localStorage.getItem('cart');
     if (storage) {
         cart = JSON.parse(storage);
     }
     const target = cart.find(element => element.id === item.id); //-- true
     if (target) {
-        target.quantity += 1;
+        console.log(typeof target.quantity);
+        console.log(typeof val);
+        target.quantity = Number(target.quantity) + Number(val);
     }
     else {
         const cartItem = {
             ...item,
-            quantity: 1
+            quantity: Number(val)
         }
         cart.push(cartItem);
     }

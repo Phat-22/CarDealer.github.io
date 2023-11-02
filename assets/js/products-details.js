@@ -70,11 +70,14 @@ function detailsProducts() {
                             </div>
                     </div>
                 `;
-                const buttonEl = detailsEl.querySelector('#cart');
-                console.log(buttonEl);
-                buttonEl.addEventListener('click', () => {
-                    addToCart(target);
-                    cartNumber();
-                });
+        const inputEl = detailsEl.querySelector('.quantity');
+        let quantityInput;
+        inputEl.addEventListener('change', (event) => quantityInput = event.target.value);
+        const buttonEl = detailsEl.querySelector('#cart');
+        console.log(buttonEl);
+        buttonEl.addEventListener('click', () => {
+            addToCart(target, quantityInput);
+            cartNumber();
+        });
     }
 }

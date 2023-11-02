@@ -50,7 +50,7 @@ function items(itemData) {
         `;
         const buttonEl = itemEl.querySelector('button');
         buttonEl.addEventListener('click', () => {
-            addToCart(itemData);
+            addToCart(itemData, 1);
             cartNumber();
         });
     }
