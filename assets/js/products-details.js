@@ -72,7 +72,7 @@ function detailsProducts() {
                 `;
         const inputEl = detailsEl.querySelector('.quantity');
         let quantityInput;
-        inputEl.addEventListener('change', (event) => quantityInput = event.target.value);
+        inputEl.addEventListener('change', (e) => quantityInput = e.target.value);
         const buttonEl = detailsEl.querySelector('#cart');
         console.log(buttonEl);
         buttonEl.addEventListener('click', () => {
